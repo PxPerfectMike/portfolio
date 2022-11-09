@@ -33,9 +33,9 @@ function Game() {
 	const [gameObj23, setGameobj23] = useState(initState[0]);
 	const [gameObj24, setGameobj24] = useState(initState[0]);
 
-	const [winPercentage, setWinPercentage] = useState(100);
 	const [won, setWon] = useState(false);
 	const [per, setPer] = useState(0);
+	const [winPercentage, setWinPercentage] = useState(per);
 
 	let winState = [
 		[1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -1841,7 +1841,13 @@ function Game() {
 					)}
 					{!won && winPercentage === 0 && (
 						<>
-							<p>Really.... 0% Correct?</p>
+							<motion.p
+								initial={{ opacity: 0 }}
+								animate={{ opacity: 1 }}
+								transition={{ duration: 1 }}
+							>
+								Really.... 0% Correct?
+							</motion.p>
 						</>
 					)}
 					{won && (

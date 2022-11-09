@@ -21,7 +21,7 @@ function Navbar() {
 					justifyContent: 'space-evenly',
 					position: 'fixed',
 					bottom: '2vw',
-					width: '98vw',
+					width: '96vw',
 					backgroundColor: 'transparent',
 				}}
 			>
