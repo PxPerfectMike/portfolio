@@ -3,6 +3,8 @@ import Navbar from './Components/Navbar';
 import Box from '@mui/material/Box';
 import NavbarMobile from './Components/NavbarMobile';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import GamePage from './Components/GamePage';
+
 function App() {
 	const matches = useMediaQuery('(min-width:600px)');
 	return (
@@ -16,6 +18,7 @@ function App() {
 					boxShadow: 'inset 0 0 0 1px #f5f5f5',
 				}}
 			>
+				<GamePage />
 				{matches ? <Navbar /> : <NavbarMobile />}
 			</Box>
 		</>
