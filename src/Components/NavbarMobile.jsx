@@ -4,6 +4,7 @@ import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManu
 import CasinoRoundedIcon from '@mui/icons-material/CasinoRounded';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
 import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
+import LunchDiningIcon from '@mui/icons-material/LunchDining';
 
 import {
 	Drawer,
@@ -40,8 +41,10 @@ function Navbar() {
 				<ListItemButton
 					TouchRippleProps={{
 						sx: {
-							color: '#ff0000ff',
-							borderRadius: '12px',
+							color: '#f5f5f5',
+							borderTopRightRadius: '999px',
+							borderBottomRightRadius: '999px',
+							maxWidth: '42vw',
 						},
 					}}
 					key={index}
@@ -57,7 +60,19 @@ function Navbar() {
 
 	return (
 		<>
-			<Button onClick={() => setOpen(true)}>Open Drawer</Button>
+			<Button
+				sx={{
+					color: 'white',
+					position: 'fixed',
+					top: 12,
+					left: 12,
+					minWidth: 0,
+					borderRadius: '50%',
+				}}
+				onClick={() => setOpen(true)}
+			>
+				{<LunchDiningIcon />}
+			</Button>
 			<Drawer
 				PaperProps={{
 					sx: {
