@@ -2,9 +2,12 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import BottomNavigation from '@mui/material/BottomNavigation';
 import BottomNavigationAction from '@mui/material/BottomNavigationAction';
-import RestoreIcon from '@mui/icons-material/Restore';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import LocationOnIcon from '@mui/icons-material/LocationOn';
+import LocationCityRoundedIcon from '@mui/icons-material/LocationCityRounded';
+import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManufacturingRounded';
+import CasinoRoundedIcon from '@mui/icons-material/CasinoRounded';
+import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
+import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
+
 function App() {
 	const [value, setValue] = useState(0);
 
@@ -48,8 +51,8 @@ function App() {
 								padding: '1.5vw',
 							},
 						}}
-						label='Recents'
-						icon={<RestoreIcon />}
+						label='Home'
+						icon={<LocationCityRoundedIcon />}
 					/>
 					<BottomNavigationAction
 						sx={{
@@ -66,8 +69,8 @@ function App() {
 								padding: '1.5vw',
 							},
 						}}
-						label='Favorites'
-						icon={<FavoriteIcon />}
+						label='Projects'
+						icon={<PrecisionManufacturingRoundedIcon />}
 					/>
 					<BottomNavigationAction
 						sx={{
@@ -84,8 +87,8 @@ function App() {
 								padding: '1.5vw',
 							},
 						}}
-						label='Nearby'
-						icon={<LocationOnIcon />}
+						label='Logic Dots'
+						icon={<CasinoRoundedIcon />}
 					/>
 					<BottomNavigationAction
 						sx={{
@@ -102,8 +105,8 @@ function App() {
 								padding: '1.5vw',
 							},
 						}}
-						label='Nearby'
-						icon={<LocationOnIcon />}
+						label='Qualifications'
+						icon={<WorkRoundedIcon />}
 					/>
 					<BottomNavigationAction
 						sx={{
@@ -120,8 +123,8 @@ function App() {
 								padding: '1.5vw',
 							},
 						}}
-						label='Nearby'
-						icon={<LocationOnIcon />}
+						label='About Me'
+						icon={<FaceRoundedIcon />}
 					/>
 				</BottomNavigation>
 			</Box>
