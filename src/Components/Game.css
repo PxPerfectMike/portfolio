@@ -81,7 +81,7 @@
 	width: 35vw;
 	height: 25vw;
 	position: fixed;
-	top: 26vh;
+	top: 28vh;
 	left: 10vw;
 	text-align: center;
 }
@@ -98,15 +98,28 @@
 	font-size: 1.5rem;
 	font-family: 'Roboto', sans-serif;
 	text-align: center;
-	margin: 2vh;
+}
+
+@media screen and (max-width: 1600px) {
+	.container {
+		bottom: 30vh;
+		right: 14vw;
+	}
+	.winPerc {
+		right: 15vw;
+		bottom: 22vh;
+		width: 24vw;
+		font-size: 2.4vw;
+	}
 }
 
 @media screen and (max-width: 1200px) {
 	.gameInfo p {
 		font-size: 1.2rem;
+		margin-top: 10px;
 	}
 	.container {
-		bottom: 40vh;
+		bottom: 30vh;
 		right: 12vw;
 		padding: 0.6rem;
 		width: 300px;
@@ -114,9 +127,102 @@
 	}
 	.winPerc {
 		right: 13vw;
-		bottom: 34vh;
+		bottom: 21vh;
 		width: 284px;
 		font-size: 1.7rem;
+	}
+}
+
+@media screen and (max-width: 912px) {
+	.container {
+		left: 0;
+		right: 0;
+		margin: auto;
+		bottom: 22vh;
+		justify-content: center;
+		width: 250px;
+		height: 250px;
+	}
+	.gameInfo {
+		top: 20vh;
+	}
+	.gameInfo p {
+		left: 0;
+		right: 0;
+		width: 75vw;
+	}
+	.gameInfo h1 {
+		font-size: 3rem;
+		margin: 0;
+		width: 80vw;
+	}
+	.game-item {
+		width: 4.5vw;
+		height: 4.5vw;
+	}
+	.winPerc {
+		left: 0;
+		bottom: 16vh;
+		width: 100vw;
+		font-size: 1.8rem;
+		text-align: center;
+	}
+	/* .gameInfo {
+		transform: translateY(-5%);
+	} */
+}
+
+@media screen and (min-height: 912px) {
+	.container {
+		bottom: 26vh;
+	}
+	.winPerc {
+		bottom: 18vh;
+	}
+}
+@media screen and (min-height: 1180px) {
+	.gameInfo {
+		top: 18vh;
+	}
+	.gameInfo p {
+		font-size: 1.5rem;
+	}
+	.container {
+		bottom: 16vh;
+		width: 50vw;
+		height: 50vw;
+	}
+	.winPerc {
+		bottom: 12vh;
+	}
+	.game-item {
+		width: 6.5vw;
+		height: 6.5vw;
+	}
+}
+@media screen and (min-height: 1368px) {
+	.gameInfo {
+		top: 26vh;
+	}
+	.gameInfo p {
+		font-size: 1.5rem;
+	}
+	.container {
+		bottom: 16vh;
+		width: 50vw;
+		height: 50vw;
+	}
+	.winPerc {
+		bottom: 12vh;
+	}
+}
+@media screen and (max-width: 800px) {
+	.gameInfo p {
+		font-size: 1rem;
+	}
+	.game-item {
+		width: 5vw;
+		height: 5vw;
 	}
 }
 
@@ -124,10 +230,34 @@
 	.container {
 		border-radius: 4px;
 		padding: 5px;
-		bottom: 70vh;
+		bottom: 12vh;
 	}
 	.winPerc {
 		font-size: 1rem;
-		bottom: 3vh;
+		bottom: 7vh;
+	}
+	.game-item {
+		width: 7vw;
+		height: 7vw;
+	}
+}
+@media screen and (max-height: 740px) {
+	.container {
+		border-radius: 4px;
+		padding: 5px;
+		bottom: 12vh;
+		width: 50vw;
+		height: 50vw;
+	}
+	.gameInfo {
+		top: 10vh;
+	}
+	.winPerc {
+		font-size: 1rem;
+		bottom: 7vh;
+	}
+	.game-item {
+		width: 8vw;
+		height: 8vw;
 	}
 }
