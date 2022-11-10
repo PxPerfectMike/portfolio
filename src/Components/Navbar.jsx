@@ -7,8 +7,9 @@ import CasinoRoundedIcon from '@mui/icons-material/CasinoRounded';
 import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
 import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
 
-function Navbar() {
+function Navbar({ navToApp }) {
 	const [value, setValue] = useState(0);
+
 	return (
 		<>
 			<BottomNavigation
@@ -28,7 +29,6 @@ function Navbar() {
 				<BottomNavigationAction
 					sx={{
 						color: 'white',
-						width: '20vw',
 						fontFamily: 'Roboto',
 						backgroundColor: 'transparent',
 						borderRadius: '999px',
@@ -39,6 +39,9 @@ function Navbar() {
 							color: 'gold',
 							padding: '1.5vw',
 						},
+					}}
+					onClick={() => {
+						navToApp(0);
 					}}
 					label='Home'
 					icon={<LocationCityRoundedIcon />}
@@ -46,7 +49,6 @@ function Navbar() {
 				<BottomNavigationAction
 					sx={{
 						color: 'white',
-						width: '20vw',
 						fontFamily: 'Roboto',
 						backgroundColor: 'transparent',
 						borderRadius: '999px',
@@ -58,13 +60,13 @@ function Navbar() {
 							padding: '1.5vw',
 						},
 					}}
+					onClick={() => navToApp(1)}
 					label='Projects'
 					icon={<PrecisionManufacturingRoundedIcon />}
 				/>
 				<BottomNavigationAction
 					sx={{
 						color: 'white',
-						width: '20vw',
 						fontFamily: 'Roboto',
 						backgroundColor: 'transparent',
 						borderRadius: '999px',
@@ -76,13 +78,13 @@ function Navbar() {
 							padding: '1.5vw',
 						},
 					}}
+					onClick={() => navToApp(2)}
 					label='Logic Dots'
 					icon={<CasinoRoundedIcon />}
 				/>
 				<BottomNavigationAction
 					sx={{
 						color: 'white',
-						width: '20vw',
 						fontFamily: 'Roboto',
 						backgroundColor: 'transparent',
 						borderRadius: '999px',
@@ -94,13 +96,13 @@ function Navbar() {
 							padding: '1.5vw',
 						},
 					}}
+					onClick={() => navToApp(3)}
 					label='Qualifications'
 					icon={<WorkRoundedIcon />}
 				/>
 				<BottomNavigationAction
 					sx={{
 						color: 'white',
-						width: '20vw',
 						fontFamily: 'Roboto',
 						backgroundColor: 'transparent',
 						borderRadius: '999px',
@@ -112,6 +114,7 @@ function Navbar() {
 							padding: '1.5vw',
 						},
 					}}
+					onClick={() => navToApp(4)}
 					label='About Me'
 					icon={<FaceRoundedIcon />}
 				/>

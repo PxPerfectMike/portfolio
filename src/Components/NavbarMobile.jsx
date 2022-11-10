@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import LocationCityRoundedIcon from '@mui/icons-material/LocationCityRounded';
 import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManufacturingRounded';
 import CasinoRoundedIcon from '@mui/icons-material/CasinoRounded';
@@ -26,7 +26,7 @@ const data = [
 	{ name: 'About Me', icon: <FaceRoundedIcon /> },
 ];
 
-function Navbar() {
+function NavbarMobile({ mobileNavToApp }) {
 	const [open, setOpen] = useState(false);
 
 	const getList = () => (
@@ -49,6 +49,7 @@ function Navbar() {
 								maxWidth: '42vw',
 							},
 						}}
+						onClick={() => mobileNavToApp(index)}
 					>
 						<ListItemIcon sx={{ color: '#f5f5f5', minWidth: '32px' }}>
 							{item.icon}
@@ -100,4 +101,4 @@ function Navbar() {
 	);
 }
 
-export default Navbar;
+export default NavbarMobile;

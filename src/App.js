@@ -1,12 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from './Components/Navbar';
-import Box from '@mui/material/Box';
 import NavbarMobile from './Components/NavbarMobile';
+import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GamePage from './Components/GamePage';
 
 function App() {
 	const matches = useMediaQuery('(min-width:600px)');
+	const [pageIndex, setPageIndex] = useState(0);
+
+	const mobileNavToApp = (pageIndex) => {
+		setPageIndex(pageIndex);
+	};
+
+	const navToApp = (pageIndex) => {
+		setPageIndex(pageIndex);
+	};
+
 	return (
 		<>
 			<Box
@@ -18,8 +28,16 @@ function App() {
 					boxShadow: 'inset 0 0 0 1px #f5f5f5',
 				}}
 			>
-				<GamePage />
-				{matches ? <Navbar /> : <NavbarMobile />}
+				{pageIndex == 0 && console.log('Home Page')}
+				{pageIndex == 1 && console.log('projects page')}
+				{pageIndex == 2 && <GamePage />}
+				{pageIndex == 3 && console.log('qualifications page')}
+				{pageIndex == 4 && console.log('about me page')}
+				{matches ? (
+					<Navbar navToApp={navToApp} />
+				) : (
+					<NavbarMobile mobileNavToApp={mobileNavToApp} />
+				)}
 			</Box>
 		</>
 	);
