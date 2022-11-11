@@ -740,9 +740,6 @@ function Game() {
 	return (
 		<>
 			<div className='container'>
-				{checkWinPercentage === 0 && <p style={{ color: 'white' }}>easy</p>}
-				{checkWinPercentage === 1 && <p style={{ color: 'white' }}>medium</p>}
-				{checkWinPercentage === 2 && <p style={{ color: 'white' }}>hard</p>}
 				{gameArray[0] === 0 && (
 					<motion.div
 						className='game-item0 game-item'
@@ -1378,6 +1375,7 @@ function Game() {
 				{gameArray[13] === 4 && (
 					<motion.div
 						id='centerGameObj'
+						style={{ overflow: 'hidden' }}
 						className='game-item4 game-item'
 						initial={winProps.initial}
 						animate={winProps.animate}
@@ -1879,29 +1877,29 @@ function Game() {
 						transition={winProps.transition}
 					></motion.div>
 				)}
-				<div id='winPerc' className='winPerc'>
-					{!won && winPercentage !== 0 && (
-						<>
-							<p>{winPercentage}% of the dots correct!</p>
-						</>
-					)}
-					{!won && winPercentage === 0 && (
-						<>
-							<motion.p
-								initial={{ opacity: 0 }}
-								animate={{ opacity: 1 }}
-								transition={{ duration: 1 }}
-							>
-								Really.... 0% Correct?
-							</motion.p>
-						</>
-					)}
-					{won && (
-						<>
-							<p>100% Dots Correct!</p>
-						</>
-					)}
-				</div>
+			</div>
+			<div id='winPerc' className='winPerc'>
+				{!won && winPercentage !== 0 && (
+					<>
+						<p>{winPercentage}% of the dots correct!</p>
+					</>
+				)}
+				{!won && winPercentage === 0 && (
+					<>
+						<motion.p
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{ duration: 1 }}
+						>
+							0% Correct...
+						</motion.p>
+					</>
+				)}
+				{won && (
+					<>
+						<p>Throw the Coin!</p>
+					</>
+				)}
 			</div>
 		</>
 	);

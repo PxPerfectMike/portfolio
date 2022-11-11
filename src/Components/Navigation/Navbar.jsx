@@ -11,115 +11,114 @@ function Navbar({ navToApp }) {
 	const [value, setValue] = useState(0);
 
 	return (
-		<>
-			<BottomNavigation
-				showLabels
-				value={value}
-				onChange={(event, newValue) => {
-					setValue(newValue);
-				}}
+		<BottomNavigation
+			showLabels
+			value={value}
+			onChange={(event, newValue) => {
+				setValue(newValue);
+			}}
+			sx={{
+				justifyContent: 'space-evenly',
+				position: 'absolute',
+				bottom: '5vh',
+				width: '96vw',
+				backgroundColor: 'transparent',
+				margin: 'auto',
+			}}
+		>
+			<BottomNavigationAction
 				sx={{
-					justifyContent: 'space-evenly',
-					position: 'fixed',
-					bottom: '2vw',
-					width: '96vw',
+					color: 'white',
+					fontFamily: 'Roboto',
 					backgroundColor: 'transparent',
+					borderRadius: '999px',
+					transition: 'all 0.3s ease-in-out',
+					padding: '1vw 0',
+					'&.Mui-selected': {
+						marginBottom: '1vw',
+						color: 'gold',
+						padding: '2vw 0',
+					},
 				}}
-			>
-				<BottomNavigationAction
-					sx={{
-						color: 'white',
-						fontFamily: 'Roboto',
-						backgroundColor: 'transparent',
-						borderRadius: '999px',
-						transition: 'all 0.3s ease-in-out',
-						padding: '1vw',
-						'&.Mui-selected': {
-							marginBottom: '1vw',
-							color: 'gold',
-							padding: '1.5vw',
-						},
-					}}
-					onClick={() => {
-						navToApp(0);
-					}}
-					label='Home'
-					icon={<LocationCityRoundedIcon />}
-				/>
-				<BottomNavigationAction
-					sx={{
-						color: 'white',
-						fontFamily: 'Roboto',
-						backgroundColor: 'transparent',
-						borderRadius: '999px',
-						transition: 'all 0.3s ease-in-out',
-						padding: '1vw',
-						'&.Mui-selected': {
-							marginBottom: '1vw',
-							color: 'gold',
-							padding: '1.5vw',
-						},
-					}}
-					onClick={() => navToApp(1)}
-					label='Projects'
-					icon={<PrecisionManufacturingRoundedIcon />}
-				/>
-				<BottomNavigationAction
-					sx={{
-						color: 'white',
-						fontFamily: 'Roboto',
-						backgroundColor: 'transparent',
-						borderRadius: '999px',
-						transition: 'all 0.3s ease-in-out',
-						padding: '1vw',
-						'&.Mui-selected': {
-							marginBottom: '1vw',
-							color: 'gold',
-							padding: '1.5vw',
-						},
-					}}
-					onClick={() => navToApp(2)}
-					label='Logic Dots'
-					icon={<CasinoRoundedIcon />}
-				/>
-				<BottomNavigationAction
-					sx={{
-						color: 'white',
-						fontFamily: 'Roboto',
-						backgroundColor: 'transparent',
-						borderRadius: '999px',
-						transition: 'all 0.3s ease-in-out',
-						padding: '1vw',
-						'&.Mui-selected': {
-							marginBottom: '1vw',
-							color: 'gold',
-							padding: '1.5vw',
-						},
-					}}
-					onClick={() => navToApp(3)}
-					label='Qualifications'
-					icon={<WorkRoundedIcon />}
-				/>
-				<BottomNavigationAction
-					sx={{
-						color: 'white',
-						fontFamily: 'Roboto',
-						backgroundColor: 'transparent',
-						borderRadius: '999px',
-						transition: 'all 0.3s ease-in-out',
-						padding: '1vw',
-						'&.Mui-selected': {
-							marginBottom: '1vw',
-							color: 'gold',
-							padding: '1.5vw',
-						},
-					}}
-					onClick={() => navToApp(4)}
-					label='About Me'
-					icon={<FaceRoundedIcon />}
-				/>
-			</BottomNavigation>
-		</>
+				onClick={() => {
+					navToApp(0);
+				}}
+				label='Home'
+				icon={<LocationCityRoundedIcon />}
+			/>
+			<BottomNavigationAction
+				sx={{
+					color: 'white',
+					fontFamily: 'Roboto',
+					backgroundColor: 'transparent',
+					borderRadius: '999px',
+					transition: 'all 0.3s ease-in-out',
+					padding: '1vw 0',
+					'&.Mui-selected': {
+						marginBottom: '1vw',
+						color: 'gold',
+						padding: '2vw 0',
+					},
+				}}
+				onClick={() => navToApp(1)}
+				label='Projects'
+				icon={<PrecisionManufacturingRoundedIcon />}
+			/>
+			<BottomNavigationAction
+				sx={{
+					color: 'white',
+					fontFamily: 'Roboto',
+					backgroundColor: 'transparent',
+					borderRadius: '999px',
+					transition: 'all 0.3s ease-in-out',
+					padding: '1vw 0',
+					'&.Mui-selected': {
+						marginBottom: '1vw',
+						color: 'gold',
+						padding: '2vw 0',
+					},
+				}}
+				onClick={() => navToApp(2)}
+				label='Logic Dots'
+				icon={<CasinoRoundedIcon />}
+			/>
+			<BottomNavigationAction
+				sx={{
+					color: 'white',
+					fontFamily: 'Roboto',
+					backgroundColor: 'transparent',
+					borderRadius: '999px',
+					transition: 'all 0.3s ease-in-out',
+					padding: '1vw 0',
+					'&.Mui-selected': {
+						marginBottom: '1vw',
+						color: 'gold',
+						padding: '2vw 0',
+					},
+				}}
+				onClick={() => navToApp(3)}
+				label='Qualifications'
+				icon={<WorkRoundedIcon />}
+			/>
+			<BottomNavigationAction
+				sx={{
+					color: 'white',
+					fontFamily: 'Roboto',
+					backgroundColor: 'transparent',
+					borderRadius: '999px',
+					transition: 'all 0.3s ease-in-out',
+					padding: '1vw 0',
+					'&.Mui-selected': {
+						marginBottom: '1vw',
+						color: 'gold',
+						padding: '2vw 0',
+					},
+				}}
+				onClick={() => navToApp(4)}
+				label='About Me'
+				icon={<FaceRoundedIcon />}
+			/>
+		</BottomNavigation>
 	);
 }
 

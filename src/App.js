@@ -4,6 +4,7 @@ import NavbarMobile from './Components/Navigation/NavbarMobile';
 import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GamePage from './Components/Game/GamePage';
+import NamePlate from './Components/NamePlate';
 
 function App() {
 	const matches = useMediaQuery('(min-width:600px)');
@@ -23,16 +24,20 @@ function App() {
 				sx={{
 					width: '100vw',
 					height: '100vh',
+					margin: 0,
+					padding: 0,
 					backgroundColor: '#070606',
 					border: '2vw solid #070606',
-					boxShadow: 'inset 0 0 0 1px #f5f5f5',
+					boxShadow: 'inset 0 0 0 2px #f5f5f5',
 				}}
 			>
+				<NamePlate className='hihihihi' />
 				{pageIndex === 0 && console.log('Home Page')}
 				{pageIndex === 1 && console.log('projects page')}
 				{pageIndex === 2 && <GamePage />}
 				{pageIndex === 3 && console.log('qualifications page')}
 				{pageIndex === 4 && console.log('about me page')}
+
 				{matches ? (
 					<Navbar navToApp={navToApp} />
 				) : (
