@@ -5,9 +5,11 @@ import Box from '@mui/material/Box';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import GamePage from './Components/Game/GamePage';
 import NamePlate from './Components/NamePlate';
+import Home from './Components/Home';
 
 function App() {
-	const matches = useMediaQuery('(min-width:600px)');
+	const fullScreen = useMediaQuery('(min-width:600px)');
+	const shortScreen = useMediaQuery('(max-height:950px)');
 	const [pageIndex, setPageIndex] = useState(0);
 
 	const mobileNavToApp = (pageIndex) => {
@@ -27,22 +29,25 @@ function App() {
 					margin: 0,
 					padding: 0,
 					backgroundColor: '#070606',
-					border: '2vw solid #070606',
+					border: '1vw solid #f5f5f5',
 					boxShadow: 'inset 0 0 0 2px #f5f5f5',
 				}}
 			>
-				<NamePlate className='hihihihi' />
-				{pageIndex === 0 && console.log('Home Page')}
-				{pageIndex === 1 && console.log('projects page')}
+				<NamePlate />
+				{pageIndex === 0 && <Home />}
 				{pageIndex === 2 && <GamePage />}
-				{pageIndex === 3 && console.log('qualifications page')}
-				{pageIndex === 4 && console.log('about me page')}
 
-				{matches ? (
+				{/* {fullScreen ? (
 					<Navbar navToApp={navToApp} />
 				) : (
 					<NavbarMobile mobileNavToApp={mobileNavToApp} />
+				)} */}
+
+				{fullScreen && !shortScreen && <Navbar navToApp={navToApp} />}
+				{fullScreen && shortScreen && (
+					<NavbarMobile mobileNavToApp={mobileNavToApp} />
 				)}
+				{!fullScreen && <NavbarMobile mobileNavToApp={mobileNavToApp} />}
 			</Box>
 		</>
 	);

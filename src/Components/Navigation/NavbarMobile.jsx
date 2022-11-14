@@ -1,9 +1,6 @@
 import React, { useState } from 'react';
 import LocationCityRoundedIcon from '@mui/icons-material/LocationCityRounded';
-import PrecisionManufacturingRoundedIcon from '@mui/icons-material/PrecisionManufacturingRounded';
 import CasinoRoundedIcon from '@mui/icons-material/CasinoRounded';
-import WorkRoundedIcon from '@mui/icons-material/WorkRounded';
-import FaceRoundedIcon from '@mui/icons-material/FaceRounded';
 import LunchDiningIcon from '@mui/icons-material/LunchDining';
 import { motion } from 'framer-motion';
 
@@ -20,10 +17,7 @@ const data = [
 		name: 'Home',
 		icon: <LocationCityRoundedIcon />,
 	},
-	{ name: 'Projects', icon: <PrecisionManufacturingRoundedIcon /> },
 	{ name: 'Logic Dots', icon: <CasinoRoundedIcon /> },
-	{ name: 'Qualifications', icon: <WorkRoundedIcon /> },
-	{ name: 'About Me', icon: <FaceRoundedIcon /> },
 ];
 
 function NavbarMobile({ mobileNavToApp }) {
@@ -66,7 +60,7 @@ function NavbarMobile({ mobileNavToApp }) {
 			<Button
 				sx={{
 					color: '#f5f5f5',
-					position: 'fixed',
+					position: 'absolute',
 					top: 16,
 					left: 16,
 					minWidth: 0,

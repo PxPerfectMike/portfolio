@@ -6,11 +6,19 @@ body {
 	font-family: 'Roboto', sans-serif;
 }
 html {
-	/* background-color: #070606; */
 	background-color: #f0f1f1;
 	padding: 0;
 	margin: 0;
 }
+
+a:link {
+	color: rgb(149, 23, 172);
+}
+
+a:visited {
+	color: #ff0000;
+}
+
 .namePlate {
 	color: #f5f5f5;
 	font-family: 'Roboto', sans-serif;
@@ -22,6 +30,13 @@ html {
 .name {
 	margin: 0;
 }
+.homeBoxDescription {
+	font-size: 14px;
+	margin: 2px;
+}
+.blockList {
+	margin: 10px;
+}
 @media screen and (max-width: 600px) {
 	.gameInfo p {
 		font-size: 1rem;
@@ -32,13 +47,52 @@ html {
 		font-size: 1.2rem;
 	}
 }
-@media screen and (max-height: 667px) {
+@media screen and (min-height: 650px) and (max-height: 667px) {
 	.container {
 		height: 5vh;
 		width: 5vh;
 	}
-	.namePlate {
-		display: none;
+	.name {
+		position: absolute;
+		left: 25;
+		top: 0;
+		width: auto;
+		margin: 5px;
+	}
+	.jobTitle {
+		position: absolute;
+		left: 25;
+		top: 30;
+		margin: 16px;
+		width: auto;
+	}
+	.gameInfo p {
+		font-size: 0.2rem;
+	}
+	.homeBoxDescription {
+		font-size: 0.7rem;
+	}
+}
+@media screen and (min-height: 650px) and (max-height: 667px) {
+	.container {
+		height: 5vh;
+		width: 5vh;
+	}
+	.name {
+		position: absolute;
+		left: 25;
+		top: 0;
+		width: auto;
+		margin: 5px;
+		font-size: 20px;
+	}
+	.jobTitle {
+		position: absolute;
+		left: 25;
+		top: 30;
+		margin: 16px;
+		width: auto;
+		font-size: 18px;
 	}
 	.gameInfo p {
 		font-size: 0.2rem;
