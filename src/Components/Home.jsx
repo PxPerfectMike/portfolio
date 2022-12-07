@@ -21,7 +21,7 @@ function Home() {
 						textAlign: 'center',
 						padding: '0',
 						margin: '0',
-						width: '96vw',
+						width: '98vw',
 						gap: '10px',
 					}}
 				>
@@ -207,8 +207,8 @@ function Home() {
 						justifyContent: 'center',
 						textAlign: 'center',
 						padding: '0',
-						margin: '-3vh 0 0 0',
-						width: '96vw',
+						margin: '-16vh 0 0 0',
+						width: '98vw',
 					}}
 				>
 					<Grid
@@ -241,7 +241,12 @@ function Home() {
 								href='https://pxperfect-quick-chat.herokuapp.com/'
 								target='_blank'
 								rel='noreferrer'
-								style={{ textDecoration: 'none', color: '#f5f5f5' }}
+								style={{
+									fontSize: '40px',
+									color: 'gold',
+									fontFamily: '"Pacifico", cursive',
+									marginTop: '30px',
+								}}
 							>
 								Quick Chat App
 							</a>
@@ -275,6 +280,51 @@ function Home() {
 								modern techniques. Beautiful and functional design is my
 								passion.
 							</p>
+							<h1
+								style={{
+									fontFamily: '"bebas neue", cursive',
+									color: 'red',
+									fontSize: '20px',
+								}}
+							>
+								Netflix Helper
+							</h1>
+							<ul
+								style={{
+									listStyleType: 'none',
+									marginBlockStart: 0,
+									marginBlockEnd: 0,
+									paddingInlineStart: 0,
+									display: 'inline !important',
+								}}
+							>
+								<li className='blockList'>
+									<a
+										href='https://play.google.com/store/apps/details?id=com.netflix_helper_app.www.twa&hl=en_US&gl=US&pli=1'
+										target='_blank'
+										rel='noreferrer'
+										style={{
+											fontSize: '10px',
+											color: 'lightblue',
+										}}
+									>
+										(Google Play Store)
+									</a>
+								</li>
+								<li className='blockList'>
+									<a
+										href='https://www.netflix-helper-app.com/'
+										target='_blank'
+										rel='noreferrer'
+										style={{
+											fontSize: '10px',
+											color: 'lightblue',
+										}}
+									>
+										(PWA Website)
+									</a>
+								</li>
+							</ul>
 						</motion.div>
 					</Grid>
 					<Grid

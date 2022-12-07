@@ -7,12 +7,11 @@ function NamePlate() {
 		<>
 			<Grid
 				container
-				sx={{ position: 'absolute', width: '25vw', top: '7vh', left: '5vw' }}
+				sx={{ position: 'absolute', width: '25vw', top: '-2vh', left: '24vw' }}
 			>
 				<Grid item xs={11} sm={11} md={11} lg={11.5}>
 					<motion.div className='namePlate'>
 						<h1 className='name'>Michael Baker</h1>
-						<h2 className='jobTitle'>Designer and Developer</h2>
 					</motion.div>
 				</Grid>
 			</Grid>

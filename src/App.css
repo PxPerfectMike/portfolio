@@ -27,9 +27,6 @@ a:visited {
 .jobTitle {
 	margin: 0;
 }
-.name {
-	margin: 0;
-}
 .homeBoxDescription {
 	font-size: 14px;
 	margin: 2px;
@@ -53,17 +50,8 @@ a:visited {
 		width: 5vh;
 	}
 	.name {
-		position: absolute;
 		left: 25;
 		top: 0;
-		width: auto;
-		margin: 5px;
-	}
-	.jobTitle {
-		position: absolute;
-		left: 25;
-		top: 30;
-		margin: 16px;
 		width: auto;
 	}
 	.gameInfo p {
@@ -79,21 +67,13 @@ a:visited {
 		width: 5vh;
 	}
 	.name {
-		position: absolute;
 		left: 25;
 		top: 0;
 		width: auto;
 		margin: 5px;
 		font-size: 20px;
 	}
-	.jobTitle {
-		position: absolute;
-		left: 25;
-		top: 30;
-		margin: 16px;
-		width: auto;
-		font-size: 18px;
-	}
+
 	.gameInfo p {
 		font-size: 0.2rem;
 	}
@@ -103,9 +83,6 @@ a:visited {
 		height: 8vh;
 		width: 8vh;
 	}
-	.namePlate {
-		margin-top: 3vh;
-	}
 }
 @media screen and (max-height: 851px) {
 	.container {
@@ -113,17 +90,11 @@ a:visited {
 		width: 8vh;
 		margin-top: 5vh;
 	}
-	.namePlate {
-		margin: 3vh;
-	}
 }
 @media screen and (max-height: 900px) {
 	.container {
 		height: 8vh;
 		width: 8vh;
 		margin-top: 5vh;
-	}
-	.namePlate {
-		margin: 3vh;
 	}
 }
