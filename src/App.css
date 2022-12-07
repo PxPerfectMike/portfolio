@@ -4,9 +4,55 @@
 
 body {
 	background-color: #070606;
-	overflow: hidden;
+	/* overflow: hidden; */
 }
 
 .App {
 	text-align: center;
+}
+
+.mainHeader {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: #f5f5f5;
+}
+
+.mainContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.mpDivs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: left;
+	padding: 3vh;
+	width: 20vw;
+	height: 20vw;
+	background-color: #f5f5f5;
+	margin: 2vh;
+	border-radius: 2vh;
+	font-size: 3vh;
+}
+
+.skillList {
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+	font-size: 1.5vh;
+}
+
+@media screen and (max-width: 1279px) {
+	.mainContainer {
+		flex-direction: column;
+	}
+
+	.mpDivs {
+		width: 80vw;
+		height: 50vw;
+	}
 }
